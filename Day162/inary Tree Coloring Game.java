@@ -2,7 +2,7 @@ class Solution {
     private int leftCount=0,rightCount=0;
     public boolean btreeGameWinningMove(TreeNode root, int n, int x) {
         countNodes(root,x);
-        int parentNodes=n-(leftCount+rightCount+1);
+        int parentCount=n-(leftCount+rightCount+1);
         int maxRegion=Math.max(parentCount,Math.max(leftCount,rightCount));
         return maxRegion>n/2;
     }
